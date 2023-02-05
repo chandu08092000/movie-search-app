@@ -3,33 +3,33 @@ import {useNavigate} from 'react-router-dom'
 import axios from "axios";
 
 const SearchPage = () => {
-  const [movies, setMovies] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [movieName, setMovieName] = useState([]);
+  const [searchDatas, setSearchData] = useState("");
+  const [selectMovie, setSelectedMovie] = useState(null);
 
   const searchMovies = async (e) => {
     e.preventDefault();
     const response = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=b56058299cbea0093f5ccfb9e43c52a4&language=en-US&query=${searchTerm}`
+      `https://api.themoviedb.org/3/search/movie?api_key=b56058299cbea0093f5ccfb9e43c52a4&language=en-US&query=${searchDatas}`
     );
-    setMovies(response.data.results);
+    setMovieName(response.data.results);
   };
 
-  const selectMovie = (movie) => {
+  const selectMovies = (movie) => {
     setSelectedMovie(movie);
   };
 
   return (
     <div className="container">
-      {selectedMovie ? (
-        <MovieDetail movie={selectedMovie} />
+      {selectMovie ? (
+        <MovieDetail movie={selectMovie} />
       ) : (
         <SearchMovies
-          movies={movies}
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
+          movieName={movieName}
+          searchDatas={searchDatas}
+          setSearchData={setSearchData}
           searchMovies={searchMovies}
-          selectMovie={selectMovie}
+          selectMovies={selectMovies}
         />
       )}
     </div>
@@ -37,26 +37,26 @@ const SearchPage = () => {
 };
 
 const SearchMovies = ({
-  movies,
-  searchTerm,
-  setSearchTerm,
+  movieName,
+  searchDatas,
+  setSearchData,
   searchMovies,
-  selectMovie,
+  selectMovies,
 }) => {
   return (
     <div >
       <form className="home_Search_Container" onSubmit={searchMovies}>
         <input className="home_Search"
           type="text"
-          value={searchTerm}
+          value={searchDatas}
           placeholder="Movie Name"
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => setSearchData(e.target.value)}
         />
         <button className="home_SearchButton" type="submit">Search</button>
       </form>
       <div className="movies_Details">
-        {movies.map((movie) => (
-          <div className="movie_Line" key={movie.id} onClick={() => selectMovie(movie)}>
+        {movieName.map((movie) => (
+          <div className="movie_Line" key={movie.id} onClick={() => selectMovies(movie)}>
              <img 
              className="home-Image"
               src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}

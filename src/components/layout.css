@@ -1,0 +1,150 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    color: aqua;
+    background-color: black;
+    height: 60px;
+    place-items: center;
+    padding: 10px;
+}
+.navlink{
+    display: flex;
+    justify-content: space-between;
+    word-spacing: 10px;
+}
+.link{
+    text-decoration: none;
+    font-size: large;
+    margin-left: 10px;
+    padding: 30px;
+    color: aqua;
+    font-weight: 400;
+}
+.active{
+    color: white;
+}
+.link1{
+    text-decoration: none;
+    color: aqua;
+}
+.home_Search{
+    border: hidden;
+    background-color: lightgrey;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px ;
+}
+.home_SearchButton{
+    border: hidden;
+    background-color: lightcoral;
+    padding: 13px 26px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.home_SearchButton:hover{
+    background-color: rgb(233, 76, 76);
+    color: aliceblue;
+}
+.movies_Details{
+    margin: 50px;
+    background-color:   rgb(196, 218, 240);
+    text-align: center;
+    border-radius: 10px;
+}
+.home_Search_Container{
+    background-color:rgb(216, 223, 253);
+    padding: 30px 60px;
+    text-align: center;
+}
+.movie_Line:hover{
+    background-color: rgb(140, 142, 176);
+    border-radius: 10px;
+    padding: 5px 10px;
+    position: relative;;
+}
+.single_Movie_Details{
+    background-color:  rgb(196, 218, 240);
+    margin: 50px;
+    border-radius: 10px;
+    height: 300px;
+}
+.single_Movie_Details_Header{
+    padding: 5px;
+}
+.blah{
+    float: right;
+}
+.image{
+    border-radius: 15px;
+    padding: 15px;
+    float: left;
+}
+.return_Home_Button{
+    border: hidden;
+    background-color: rgb(130, 140, 176);
+    color: rgb(6, 6, 6);
+    width: 100%;
+    height: 30px;
+    border-radius: 8px;
+    padding: 10px;
+}
+.return_Home_Button:hover{
+    background-color:rgb(122, 167, 96);
+    font-weight: 500;
+    font-size: medium;
+    height: 60px;
+}
+.single_Movie_Details_Overview{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    padding: 15px;
+}
+.single_Movie_Details_release_date{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.like-Button{
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: lightgreen;
+    border: hidden;
+    border-radius: 10px;
+}
+.dislike-Button{
+    padding: 15px 30px;
+    margin: 0px;
+    background-color: rgb(237, 96, 74);
+    border: hidden;
+    border-radius: 10px;
+}
+.home-Page{
+    margin: 100px;
+    text-align: center;
+}
+.home-Button{
+    border: hidden;
+    border-radius: 10px;
+    width: 500px;
+    height: 40px;
+    background-color: azure;
+    margin: 20px;
+}
+.home-Button:hover{
+    background-color: lightskyblue;
+}
+.home-Image{
+    margin: 10px;
+    border-radius: 5px ;
+}
+.movie-Name{
+    float: right;
+    text-align: center;
+    margin: 30px;
+    margin-right:100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}

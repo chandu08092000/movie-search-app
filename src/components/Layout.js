@@ -10,6 +10,7 @@ function  Layout() {
 
             <NavLink activeClassName='active' className='link' to='/'>HOME</NavLink>
             <NavLink activeClassName='active' className='link' to='/Search'>Search</NavLink>
+            <NavLink activeClassName='active' className='link' to='/Sample'>Sample</NavLink>
 
         </div>
     

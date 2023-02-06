@@ -59,6 +59,10 @@
     border-radius: 10px;
     margin: 5px;
 }
+.refresh-Button:hover{
+    background-color: rgb(7, 210, 20);
+    color: rgb(255, 253, 253);
+}
 .single-refresh-Button{
     float: right;
     border: hidden;

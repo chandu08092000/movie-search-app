@@ -50,6 +50,28 @@
     background-color: rgb(233, 76, 76);
     color: aliceblue;
 }
+.refresh-Button{
+    float: right;
+    padding-top: 15px;
+    border: hidden;
+    background-color: rgb(141, 245, 93);
+    padding: 13px 26px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.single-refresh-Button{
+    float: right;
+    border: hidden;
+    background-color: rgb(177, 76, 76);
+    padding: 13px 26px;
+    color: aliceblue;
+    border-radius: 10px;
+    margin: 5px;
+}
+.single-refresh-Button:hover{
+    background-color: red;
+    padding: 15px 30px;
+}
 .movies_Details{
     margin: 50px;
     background-color:   rgb(196, 218, 240);
@@ -114,12 +136,22 @@
     border: hidden;
     border-radius: 10px;
 }
+.like-Button:hover{
+    background-color: green;
+    color: aliceblue;
+    padding: 18px 33px;
+}
 .dislike-Button{
     padding: 15px 30px;
     margin: 0px;
-    background-color: rgb(237, 96, 74);
+    background-color: rgb(243, 130, 113);
     border: hidden;
     border-radius: 10px;
+}
+.dislike-Button:hover{
+    background-color: red;
+    color: aliceblue;
+    padding: 18px 33px;
 }
 .home-Page{
     margin: 100px;

@@ -36,6 +36,10 @@ const SearchPage = () => {
   );
 };
 
+function refreshPage() {
+  window.location.reload(false);
+}
+
 const SearchMovies = ({
   movieName,
   searchDatas,
@@ -53,6 +57,7 @@ const SearchMovies = ({
           onChange={(e) => setSearchData(e.target.value)}
         />
         <button className="home_SearchButton" type="submit">Search</button>
+        <button className="refresh-Button" onClick={refreshPage}>Click to reload!</button>
       </form>
       <div className="movies_Details">
         {movieName.map((movie) => (
@@ -73,7 +78,7 @@ const SearchMovies = ({
 
 const MovieDetail = ({ movie }) => {
     const navigate=useNavigate();
-    const navigate2=()=>{
+    const navigatetoo=()=>{
         navigate('/')
     }
 
@@ -120,6 +125,7 @@ const MovieDetail = ({ movie }) => {
 
   return (
     <div className="single_Movie_Details">
+    <button className="single-refresh-Button" onClick={refreshPage}>Back to search</button>
         
             <img
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
@@ -134,7 +140,7 @@ const MovieDetail = ({ movie }) => {
             <button onClick={likef} className="like-Button">Like{like}</button>
             <button onClick={dislikef} className="dislike-Button">Dislike {dislike}</button>
 
-            <button onClick={navigate2} className="return_Home_Button">Return to Home</button>
+            <button onClick={navigatetoo} className="return_Home_Button">Return to Home</button>
         
     </div>
   );
